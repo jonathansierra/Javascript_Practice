@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Callbacks</title>
+  </head>
+  <body>
+    <h1 id="agenda">Estoy despertando</h1>
+    </--
+      Itinerario:
+        - Despertar
+        - Ducha
+        - Vestirse
+        - Desayunar
+        - Platzi
+    -->
+    <script>
+      const $agenda = document.getElementById('agenda')
+      const DESPERTAR = 3000
+      const DUCHA = 2000
+      const VESTIRSE = 2000
+      const DESAYUNO = 3000
+      const PLATZI = 5000
+
+      setTimeout(() => {
+        $agenda.textContent = 'Ahora me estoy duchando...'
+        setTimeout(() => {
+          $agenda.textContent = 'Ahora me estoy vistiendo...'
+          setTimeout(() => {
+            $agenda.textContent = 'Ahora estoy desayunando...'
+            setTimeout(() => {
+              $agenda.textContent = 'Ahora estoy estudiando en PLATZI...'
+              setTimeout(() => {
+                $agenda.textContent = 'Y javascript es mi lenguaje favorito <3'
+              }, DESAYUNO)
+            }, DESAYUNO)
+          }, VESTIRSE)
+        }, DUCHA)
+      }, DESPERTAR)
+    </script>
+  </body>
+</html>

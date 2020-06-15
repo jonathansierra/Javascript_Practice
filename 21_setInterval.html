@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>setInterval</title>
+  </head>
+  <body>
+    <h1 id="timer">Han pasado 0 segundos</h1>
+    <script>
+    let counter = 0
+      const timer = document.getElementById('timer')
+      setInterval(() => {
+        counter++
+        timer.textContent = (counter > 1) ? `Han pasado ${counter} segundos` : `Ha pasado ${counter} segundo`;
+        console.log('Ha pasado 1 segundo');
+      }, 1000)
+    </script>
+  </body>
+</html>
